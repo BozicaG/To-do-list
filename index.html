@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do List</title>
+<script defer src="bundle.js"></script></head>
+
+<body>
+    <header class="header-section">
+        <img class="logo" src="img/icon.svg"  alt="to-do list icon">
+        </img>
+        <p class="header-text">To-do List</p>
+    </header>
+
+    <div class="container">
+        <div class="side-bar">
+            <div class="side-tasks">
+                <h2 id="top-side">Tasks</h2>
+                <button class="btn sidebtn" id="all-tasks" aria-label="All Tasks">
+                    <img class="sidebar-img" src="img/all.svg" alt="all-tasks">
+                    All</button>
+                <button class="btn sidebtn" id="important-tasks" aria-label="Important Tasks">
+                    <img class="sidebar-img" src="img/important.svg" alt="important-tasks">
+                    Important</button>
+                <button class="btn sidebtn" id="medium-tasks" aria-label="Medium Tasks"><img class="sidebar-img" src="img/medium.svg" alt="medium-tasks">
+                    Medium</button>
+                <button class="btn sidebtn" id="low-tasks"><img class="sidebar-img" src="img/low.svg" alt="low-tasks" aria-label="Low Tasks">
+                    Low</button>
+                    <button class="btn sidebtn" id="clear-completed" aria-label="Clear Completed tasks">
+                    Delete Completed Tasks 
+                    <img class="sidebar-img trash-icon default" src="img/trash.svg" alt="clear-completed">
+                    <img src="img/trash-hover.svg" class="trash-icon hover" alt="clear-completed">
+                    </button>
+                    </div>
+                    <div class="side-projects">
+                        <h2 id="projects-header">Projects</h2>
+                        <div class="projects" id="projects">
+                            </div>
+                        <button class="btn new-projects" id="new-project" aria-label="New project">
+                            <img class="sidebar-img" src="img/plus.svg" alt="add-projects">
+                            New Project</button>
+                            
+                    </div>
+
+        </div>
+
+        <div id="content"></div>
+    </div>
+
+    <footer>created by <a href="https://github.com/BozicaG">&nbsp;Bozica</a></footer>
+                <!-- Task Dialog -->
+        <dialog id="task-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Add new Task</h3>
+                </div>
+            <form id="task-form" method="dialog">
+                <div class="form-group">
+                    <label for="task-title">Title *</label>
+                    <input type="text" id="task-title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="task-description">Description</label>
+                    <textarea id="task-description" name="description"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="task-dueDate">Due date</label>
+                    <input type="date" id="task-dueDate" name="dueDate">
+                </div>
+                <div class="form-group">
+                    <label for="task-priority">Priority</label>
+                    <select id="task-priority" name="priority">
+                        <option value="low">Low</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="important">Important</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="task-project">Project</label>
+                    <select id="task-project" name="projectId">
+                        <option value="">None</option>
+                    </select>
+                </div>
+                <div class="form-actions">
+                     <button type="submit" class="btn-submit">Add Task</button>
+                    <button type="button" class="btn-cancel" id="cancel-task-btn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </dialog>
+
+    <!-- Project Dialog -->
+    <dialog id="project-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add new project</h3>
+            </div>
+            <form id="project-form" method="dialog">
+                <div class="form-group">
+                    <label for="project-name">Project Name *</label>
+                    <input type="text" id="project-name" name="projectName" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">Add Project</button>
+                    <button type="button" class="btn-cancel" id="cancel-project-btn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </dialog>
+</body>
+</html>
