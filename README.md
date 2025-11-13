@@ -13,7 +13,7 @@ A clean and functional to-do list application inspired by Odin, built with vanil
 
 ## Demo
 
-[To-do List](https://bozicag.github.io/to-do-list)
+[To-do List](https://bozicag.github.io/To-do-list)
 
 
 ## Technology used
