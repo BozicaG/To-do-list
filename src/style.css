@@ -179,7 +179,7 @@ li{
     display: flex;
     padding: 0.5rem 0;
     align-items: center;
-    height: 30px;
+    height:fit-content;
     border-bottom: 1px solid var(--light-peach);
     width: 100%;
 

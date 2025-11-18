@@ -22,7 +22,7 @@ export function deleteProject(id) {
 }
 
 export function editTask(id, updatedData) {
-  const task = tasks.find(t => t.id === id);
+  const task = tasks.find(t => t.id === Number(id));
   if (task) Object.assign(task, updatedData);
   saveTasks();
 }

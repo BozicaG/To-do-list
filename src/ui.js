@@ -197,6 +197,7 @@ document.querySelector('#low-tasks img').src = lowIcon;
     };
     const editingId = taskForm.dataset.editingId;
     if (editingId) {
+      newTask.id = Number(editingId);
       editTask(editingId, newTask);
       taskForm.dataset.editingId = '';
     } else {
